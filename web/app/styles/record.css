@@ -8,8 +8,8 @@
   background: #000835;
   position: relative;
   background: linear-gradient(to bottom right, #000322, #000835, #001140);
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 3, 34, 0.8)),
-              url('/assets/img/amadeusImage.png');
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+            url('/assets/img/registerbackground.jpeg');
   background-size: cover;
   background-position: center;
 }
