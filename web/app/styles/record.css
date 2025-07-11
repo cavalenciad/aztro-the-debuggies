@@ -34,7 +34,7 @@
   background: linear-gradient(to bottom right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
             url('/assets/img/registerbackground.jpeg');
   background-size: cover;
-  background-position: center; */
+  background-position: center; 
 }
 
 .form-container {
