@@ -1,4 +1,16 @@
-body, html {
+:root {
+  --primer-color: #010A26;
+  --segundo-color: #0137A3;
+  --tercer-color: #03318C;
+  --cuarto-color: #033E8C;
+  --quinto-color: #F2F2F2;
+
+  --primer-color-opaco: #010A26AA;
+  --segundo-color-opaco: #0137A340;
+}
+
+body,
+html {
   margin: 0;
   padding: 0;
 }
@@ -9,32 +21,34 @@ body, html {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to bottom right, #000322, #000835, #001140);
+  /* background: linear-gradient(to bottom right, #000322, #000835, #001140);
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 3, 34, 0.8)),
-              url('/assets/img/tierra.jpg');
+    url("/assets/img/tierra.jpg");  */
+  background-color: var(--quinto-color);
   background-size: cover;
   background-position: center;
 }
 
 #formRegister {
   width: 50%;
-  height: 55vh;
+  height: 50vh;
   max-width: 500px;
   min-width: 500px;
-  max-height: 550px;
-  min-height: 500px;
+  max-height: 500px;
+  min-height: 450px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 35px;
-  border: 2px solid #00d4ff;
-  border-radius: 25px;
+  /* border: 2px solid var(--segundo-color); */
+  /* border-radius: 25px; */
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  color: #fff;
+  /* border: 2px solid rgba(255, 255, 255, 0.2); */
+  background-color: #fff;
+  /* backdrop-filter: blur(10px); */
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  color: var(--primer-color);
   border-radius: 10px;
 }
 
@@ -43,13 +57,21 @@ body, html {
   opacity: 1;
 }
 
+.titleInitSesion{
+  color: var(--segundo-color);
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 1.5em;
+}
+
 .input {
   width: 70%;
   padding: 14px;
   font-size: 18px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
+  border: 2px solid var(--quinto-color);
+  background: var(--segundo-color-opaco);
+  color: var(--primer-color);
   border-radius: 10px;
   outline: none;
   transition: all 0.3s ease-in-out;
@@ -59,7 +81,7 @@ body, html {
 }
 
 .input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--primer-color-opaco);
   transition: color 0.3s ease-in-out;
 }
 
@@ -68,8 +90,8 @@ body, html {
 }
 
 .input:focus {
-  border: 2px solid #00d4ff;
-  box-shadow: 0 0 15px #00d4ff;
+  /* border: 2px solid var(--segundo-color); */
+  box-shadow: 0 0 10px var(--primer-color-opaco);
 }
 
 .input:focus::placeholder {
@@ -81,29 +103,30 @@ body, html {
 .input:-webkit-autofill:focus,
 .input:-webkit-autofill:active {
   background: rgba(255, 255, 255, 0.1) !important;
-  color: white !important;
-  -webkit-text-fill-color: white !important;
+  color: var(--primer-color) !important;
+  -webkit-text-fill-color: var(--primer-color) !important;
   border: 1px solid rgba(255, 255, 255, 0.3) !important;
   transition: background-color 5000s ease-in-out 0s;
 }
 
 .sessionButton {
-  color: white;
+  color: var(--quinto-color);
   width: 70%;
   text-align: center;
   padding: 12px 18px;
   font-weight: bold;
   text-decoration: none;
-  border: 2px solid #00d4ff;
+  /* border: 2px solid var(--segundo-color); */
   border-radius: 8px;
-  background-color: transparent;
+  /* background-color: var(--cuarto-color); */
+  background: linear-gradient(to right, #0137a3, #034ed1);
   transition: all 0.3s ease-in-out;
 }
 
 .sessionButton:hover {
-  background-color: #00d4ff;
-  color: #000835;
-  box-shadow: 0 0 10px #00d4ff;
+  background-color: var(--tercer-color);
+  /* color: #000835; */
+  box-shadow: 0 0 10px var(--primer-color-opaco);
 }
 
 .sessionButton:active {
@@ -131,11 +154,12 @@ span {
 }
 
 .registerLink {
-  color: white;
+  color: var(--segundo-color);
   font-weight: bold;
   text-decoration: none;
   position: relative;
-  transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
   margin-left: 15px;
   display: inline-block;
 }
@@ -147,13 +171,13 @@ span {
   bottom: -3px;
   width: 0;
   height: 2px;
-  background-color: #00d4ff;
+  background-color: var(--segundo-color);
   transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
 }
 
 .registerLink:hover {
-  color: #00d4ff;
-  text-shadow: 0 0 8px #00d4ff;
+  color: var(--segundo-color);
+  /* text-shadow: 0 0 8px var(--primer-color); */
   transform: scale(1.1);
 }
 
@@ -178,11 +202,23 @@ span {
 }
 
 @keyframes fadeIn {
-  from {opacity: 0; transform: translateY(-20px);}
-  to {opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeOut {
-  from {opacity: 1; transform: translateY(0);}
-  to {opacity: 0; transform: translateY(-20px);}
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
 }
