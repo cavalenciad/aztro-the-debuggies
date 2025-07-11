@@ -8,6 +8,7 @@ import {
 } from "@remix-run/react";
 import appStylesHref from "./app.css?url";
 import MenuNavegacion from "./routes/menu-navegacion";
+import Footer from "./components/Footer"; 
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: appStylesHref },
@@ -44,9 +45,12 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <MenuNavegacion />
-        <div id="detail">
-          <Outlet />
+        <div className="min-h-screen flex flex-col">
+          <MenuNavegacion />
+          <main className="flex-grow">
+            <Outlet />
+          </main>
+          <Footer />
         </div>
         <ScrollRestoration />
         <Scripts />
@@ -57,4 +61,3 @@ export default function App() {
     </html>
   );
 }
-

@@ -21,10 +21,8 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background: linear-gradient(to bottom right, #000322, #000835, #001140);
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 3, 34, 0.8)),
-    url("/assets/img/tierra.jpg");  */
-  background-color: var(--quinto-color);
+  background: linear-gradient(to bottom right, #000322, #000835, #001140);
+  background: url('/assets/img/trip.jpg');
   background-size: cover;
   background-position: center;
 }
