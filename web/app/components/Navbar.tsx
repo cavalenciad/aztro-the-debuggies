@@ -23,8 +23,13 @@ export default function Navbar() {
             {/* Logo section */}
             <div className="flex items-center pl-2">
               <a className="flex items-center h-full" href="/">
+                
+                
+                
+                
+        
                 <img
-                  className="h-12 w-auto transition-transform duration-300 hover:scale-110"
+                  className="h-5 w-auto transition-transform duration-300 hover:scale-110"
                   src="/imagenes/amadeus-logo-dark-sky.png"
                   alt="logo"
                 />

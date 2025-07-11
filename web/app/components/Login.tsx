@@ -36,7 +36,7 @@ export default function Login() {
         );
 
         document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-        document.cookie = `token=${user.token}; path=/; SameSite=Strict;`;
+        document.cookie = `token=${user.token}; path=/; max-age=3600`; // Set cookie with 1 hour expiration
         console.log("Current cookies:", document.cookie);
 
         // Dispatch custom event to notify userAuth changes
@@ -61,6 +61,7 @@ export default function Login() {
   return (
     <div id="container2" className="login-container">
       <form id="formRegister" onSubmit={handleSubmit}>
+        <h2 className="titleInitSesion">Iniciar sesión</h2>
         <input
           type="email"
           id="email"
@@ -100,6 +101,6 @@ export default function Login() {
           <p>{errorMessage}</p>
         </div>
       )}
-    </div>
-  );
+    </div>
+  );
 }

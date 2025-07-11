@@ -56,11 +56,12 @@ const RegisterForm: React.FC = () => {
   return (
     <div id="Registercon">
       <form id="formRegister" className="form-container" onSubmit={handleSubmit}>
+        <h2 className="titleRegister">Registrarse</h2>
         <input
           type="email"
           id="email"
           name="email"
-          placeholder="Enter your email"
+          placeholder="Introduce tu correo electrónico"
           required
           className="input"
         />
@@ -68,7 +69,7 @@ const RegisterForm: React.FC = () => {
           type="text"
           id="nombre"
           name="nombre"
-          placeholder="Enter your name"
+          placeholder="Introduce tu nombre"
           required
           className="input"
         />
@@ -76,7 +77,7 @@ const RegisterForm: React.FC = () => {
           type="password"
           id="password"
           name="password"
-          placeholder="Enter your password"
+          placeholder="Introduce tu contraseña"
           required
           className="input"
         />
@@ -115,8 +116,10 @@ const RegisterForm: React.FC = () => {
         <button className="registerButton" id="button" type="submit" disabled={!isCheckboxChecked}>
           Registrarse
         </button>
-
-        <a href="/login">¿Ya tienes una cuenta? Inicia sesión</a>
+        <strong>¿Ya tienes una cuenta? </strong>
+        <a className="inicioSesionLink" href="/login">
+          <strong>Inicia sesión</strong>
+        </a>
       </form>
       {successMessage && (
         <div id="mensaje-exito">
@@ -132,4 +135,4 @@ const RegisterForm: React.FC = () => {
   );
 };
 
-export default RegisterForm;
+export default RegisterForm;
